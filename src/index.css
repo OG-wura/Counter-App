@@ -1,105 +1,100 @@
 
-*{ 
-Padding: 0;
-Margin: 0;
-Box-sizing: border-box;
-Font-family: Sans-serif;
-List-style: none; 
-Text-decoration: none;
+/* Common styles for all screen sizes */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Shared styles for the flex container and homepage */
+.flex, .homepage {
+  width: 100%;
+  background-color: #008545;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
 }
 
 .flex {
-width: 500px;
-Height: 8vh; 
-Margin: 0 auto; 
-Display: flex; 
-justify-content: space-evenly; 
-align-items: center;
-background-color: #008545;
+  height: 8vh;
 }
 
-.homepage{
-width: 500px;
-height: 30vh;
-background-color: #008545;
-Margin: 0 auto;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+.homepage {
+  height: 30vh;
+  flex-direction: column;
 }
 
-.homepage h1{
-  margin-bottom: 6px;
-  font-size: 15px;
-  font-weight: 100;
-  letter-spacing: 7px;
+.homepage h1 {
+  font-size: 1rem;
+  letter-spacing: 2px;
   color: white;
   text-transform: uppercase;
 }
 
-.homepage p{
-  font-size: 3.5rem;
+.homepage p {
+  font-size: 3rem;
   color: white;
   font-weight: 700;
   text-transform: capitalize;
-  
 }
 
-.homepage p span{
-  color: yellow;;
+.homepage p span {
+  color: yellow;
 }
 
-.counter{
-  width: 500px;
-  height: 70vh;
-  Margin: 0 auto;
-}
-
-
-.counter h1{
-  margin-bottom: 15px;
-  font-weight: 100;
-  text-align: center;
-  margin: 20px;
-  
-}
-.counter p{
-  margin-bottom: 15px;
-  font-size: 25px;
+/* Counter section */
+.counter {
+  width: 100%;
+  height: auto;
   text-align: center;
 }
 
+.counter h1 {
+  margin: 20px 0;
+  font-size: 2rem;
+}
+
+.counter p {
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+/* Button styles */
 .btn {
   display: inline-block;
   margin: 10px 25px;
-  padding: 0.2rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 6px;
   border: none;
-  
+  text-align: center;
 }
 
-.btn:hover{
+.btn:hover {
   cursor: pointer;
   background-color: #3E3E3E;
   color: #fff;
 }
 
-.input{
+/* Input styles */
+.input {
   display: block;
-  margin: 20px 170px;
+  margin: 20px auto;
   padding: 5px;
-  font-size: 25px;
+  font-size: 1.5rem;
+  width: 80%;
 }
 
-/* Normal CSS Code */
+/* Navbar styles */
 .navbar {
   display: flex;
   justify-content: center;
   background-color: #008545;
   padding: 1rem;
-  width: 500px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .navbar ul {
@@ -128,21 +123,35 @@ align-items: center;
   color: #fff;
 }
 
-.error-page{
-  width: 500px;
-  margin: 0 auto;
+/* Error page styles */
+.error-page {
+  width: 100%;
 }
 
-h1{
-  
-  width: 500px;
-  margin: 0 auto;
+h1 {
   text-align: center;
   padding: 2rem 0.75rem;
 }
 
-/* Error message for input */
-/* .error-message {
-  /* color: red; */
-  /* font-size: 1rem;
-} */ 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .flex, .homepage {
+    flex-direction: column;
+  }
+
+  .homepage h1 {
+    font-size: 2rem;
+  }
+
+  .homepage p {
+    font-size: 2rem;
+  }
+
+  .counter p {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    padding: 0.4rem 1rem;
+  }
+}
