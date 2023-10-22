@@ -1,5 +1,4 @@
 
-/* Common styles for all screen sizes */
 * {
   padding: 0;
   margin: 0;
@@ -9,7 +8,6 @@
   text-decoration: none;
 }
 
-/* Shared styles for the flex container and homepage */
 .flex, .homepage {
   width: 100%;
   background-color: #008545;
